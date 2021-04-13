@@ -54,20 +54,29 @@
 
                 <div class="contenedor-imput">
 
-                    <input class="col-48" type="text" name="txtNombre" id="" placeholder="ingrese nombre">
-                    <input class="col-48" type="text" name="txtApellido" id="" placeholder="ingrese apellido">
-                    <input class="col-100" type="email" name="txtEmail" id="" placeholder="ingrese email">
-                    <input class="col-48" type="text" name="txtUsuario" id="" placeholder="ingrese usuario">
-                    <input class="col-48" type="password" name="txtPass" id="" placeholder="ingrese password">
-                    <input class="col-100" type="text" name="txtFono" id="" placeholder="ingrese telefono">
+                    <input class="col-48" type="text" name="txtRut" id="txtRut" placeholder="ingrese rut ej. 12555888-5">
+                    <input class="col-48" type="text" name="txtNombreCompleto" id="txtNombreCompleto" placeholder="ingrese nombre y apellido">
+                    <input class="col-48" type="date" name="txtFechaNaci" id="txtFechaNaci">
+                    <input class="col-48" type="email" name="txtEmail" id="txtEmail" placeholder="ingrese email">
+                    <input class="col-48" type="text" name="txtUsuario" id="txtUsuario" placeholder="ingrese usuario">
+                    <input class="col-48" type="password" name="txtPass" id="txtPass" placeholder="ingrese password">
+                    <input class="col-100" type="text" name="txtFono" id="txtFono" placeholder="ingrese telefono">
 
                     <input class="btn-enviar" type="submit" value="Registrar">
+                    <input class="btn-enviar" type="button" value="Validacion" onclick="valida()">
                 </div>
             </form>
 
         </section>
 
+    <!-- sector scripts de java -->
 
+    <script>
+        function hola() {
+            alert('Hola mundo');
+        }
+    </script>
+    <script src="js/scripts.js"></script>
 </body>
 
 
