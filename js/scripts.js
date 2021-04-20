@@ -8,7 +8,7 @@ function valida() {
     if ( resp == false) {
         return false;
     }
-    alert('formulario validado');
+    //alert('formulario validado');
     return true;
 }
 
@@ -25,7 +25,13 @@ function validaFecha() {
     var fechaDelControl = new Date(ano,(mes-1),dia);
     //alert(fechaDelControl);
     if ( fechaDelControl > fechaSistema ) {
-        alert('fecha de nacimiento incorrecta');
+        //alert('fecha de nacimiento incorrecta');
+        //Swal.fire('fecha de nacimiento incorrecta');
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'fecha de nacimiento incorrecta'
+          });
         return false;
     }
     //////////////////////
@@ -36,7 +42,7 @@ function validaFecha() {
     var anos = Math.round( diferencia / 365);
     //alert('Años:' + anos);
     if ( anos >= 18 ) {
-        alert('Puede adoptar un perrito, es mayor de edad '+anos);
+        //alert('Puede adoptar un perrito, es mayor de edad '+anos);
         return true;
     }else{
         alert('No puede adoptar una mascota, usted tiene tan solo '+anos+' anos de edad');
@@ -49,9 +55,12 @@ function validaRut() {
     var rut = document.getElementById('txtRut').value;
     console.log(rut);
     //////////////// determinar largo del rut /////////////////
-    if ( rut.length != 10) {
+    if ( rut.length != 10 && rut.length !=9) {
         alert('largo del rut incorrecto, maximo largo 10 caracteres');
         return false;
+    }
+    if ( rut.length == 9) {
+        rut = '0'+rut;
     }
     ///////////// recortar caracter tras caracter el rut ////////////
     var num = 3;
@@ -83,7 +92,7 @@ function validaRut() {
         alert('rut incorrecto');
         return false;
     }else{
-        alert('rut correcto');
+        //alert('rut correcto');
     }
     return true;
 }
